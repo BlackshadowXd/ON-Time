@@ -72,3 +72,17 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     alert(`Muchas gracias ${name} por contactarte con ONTIME, pronto recibirás un email al siguiente dirección: ${email}`);
     this.reset();
 })
+
+// ! transparencia de barra 
+
+const header = document.querySelector('.header');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+        header.classList.add('transparent');
+    } else {
+        header.classList.remove('transparent');
+    }
+    lastScrollY = window.scrollY;
+});

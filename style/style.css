@@ -39,20 +39,37 @@ body {
 /* ! estilos de la cabezera */
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var(--background-color);
-    padding: 1rem 0;
+    padding: .5rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    margin-bottom: 3vh;
+}
+
+.header.transparent {
+    background-color: rgba(0, 0, 0, 0.288);
+    backdrop-filter: blur(10px);
+    box-shadow: none;
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2vh;
 }
+
 
 .nav ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav li {
@@ -94,6 +111,7 @@ body {
     color: var(--text-color);
     padding: 3rem 0;
     text-align: center;
+    margin-top: 5rem;
     margin-bottom: 2rem;
     border-radius: 10px;
     box-shadow: 5px 5px 15px gray;
